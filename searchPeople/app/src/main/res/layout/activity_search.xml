@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gaya.searchpeople.SearchActivity">
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:checkedButton="@+id/users"
+        android:id="@+id/radioGroup"
+        android:layout_alignRight="@+id/etName"
+        android:layout_alignEnd="@+id/etName"
+        android:layout_alignLeft="@+id/etName"
+        android:layout_alignStart="@+id/etName">
+        <RadioButton android:id="@+id/users"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search behind users"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/searchedPeople"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search behind searched people"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/radioGroup"
+        android:layout_marginTop="11dp"
+        android:layout_marginRight="15dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:layout_marginLeft="15dp"/>
+
+    <EditText
+        android:id="@+id/etSurname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etName"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:hint="Surname"
+        android:inputType="textPersonName"
+        android:layout_alignLeft="@+id/etName"
+        android:layout_alignStart="@+id/etName"
+        android:layout_alignRight="@+id/etName"
+        android:layout_alignEnd="@+id/etName" />
+
+    <Button
+        android:id="@+id/bSearch"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/etSurname"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/colorAccent"
+        android:text="Search"
+        android:layout_alignRight="@+id/etSurname"
+        android:layout_alignEnd="@+id/etSurname" />
+
+    <GridView
+        android:id="@+id/gvSearchResult"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@+id/bSearch"
+        android:layout_marginTop="16dp"
+        android:layout_alignRight="@+id/etSurname"
+        android:layout_alignEnd="@+id/etSurname"
+        android:layout_alignLeft="@+id/bSearch"
+        android:layout_alignStart="@+id/bSearch" />
+
+    <LinearLayout
+        android:id="@+id/layout_bottom_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#222222"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dip"
+        android:weightSum="1">
+
+        <ImageButton
+            android:id="@+id/bHome"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="0.20"
+            app:srcCompat="@drawable/ic_ic_home" />
+
+        <ImageButton
+            android:id="@+id/bSearched"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="0.20"
+            app:srcCompat="@drawable/ic_ic_search" />
+
+        <ImageButton
+            android:id="@+id/bUsers"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="0.20"
+            app:srcCompat="@drawable/ic_users" />
+
+        <ImageButton
+            android:id="@+id/bSetting"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="0.20"
+            app:srcCompat="@drawable/ic_settings" />
+
+        <ImageButton
+            android:id="@+id/bExit"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="0.20"
+            app:srcCompat="@drawable/ic_exit" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

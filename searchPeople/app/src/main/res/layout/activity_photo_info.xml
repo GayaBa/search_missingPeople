@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gaya.searchpeople.PhotoInfoActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="217dp"
+        android:layout_height="171dp"
+        app:srcCompat="@drawable/ic_launcher"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/bAddPhoto"
+        app:layout_constraintLeft_toLeftOf="@+id/bAddPhoto"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="21dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/bAddPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="21dp"
+        android:background="@color/colorAccent"
+        android:text="Add photo"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintLeft_toLeftOf="@+id/etComment"
+        app:layout_constraintRight_toRightOf="@+id/etComment"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/etComment"
+        android:layout_width="331dp"
+        android:layout_height="118dp"
+        android:ems="10"
+        android:hint="You can add any comment here"
+        android:inputType="textMultiLine"
+        tools:layout_editor_absoluteX="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/bAddPhoto"
+        app:layout_constraintRight_toRightOf="@+id/bNext"
+        app:layout_constraintLeft_toLeftOf="@+id/bNext"
+        android:layout_below="@+id/bAddPhoto"
+        android:layout_marginTop="26dp"
+        android:layout_alignLeft="@+id/bAddPhoto"
+        android:layout_alignStart="@+id/bAddPhoto"
+        android:layout_alignRight="@+id/bAddPhoto"
+        android:layout_alignEnd="@+id/bAddPhoto" />
+
+    <Button
+        android:id="@+id/bNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="Next"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etComment"
+        app:layout_constraintVertical_bias="0.724"
+        android:layout_below="@+id/etComment"
+        android:layout_marginTop="34dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

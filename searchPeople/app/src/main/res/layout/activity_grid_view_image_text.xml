@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gaya.searchpeople.UsersInfoActivity">
+
+
+    <GridView
+        android:id="@+id/grid_view_image_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnWidth="110dp"
+        android:gravity="center"
+        android:numColumns="auto_fit" />
+
+    <LinearLayout
+        android:id="@+id/layout_bottom_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#222222"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dip"
+        android:weightSum="1">
+
+        <ImageButton
+            android:id="@+id/bHome"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="0.20"
+            app:srcCompat="@drawable/ic_ic_home" />
+
+        <ImageButton
+            android:id="@+id/bSearch"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="0.20"
+            app:srcCompat="@drawable/ic_ic_search" />
+
+        <ImageButton
+            android:id="@+id/bUsers"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="0.20"
+            app:srcCompat="@drawable/ic_users" />
+
+        <ImageButton
+            android:id="@+id/bSetting"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="0.20"
+            app:srcCompat="@drawable/ic_settings" />
+
+        <ImageButton
+            android:id="@+id/bExit"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="0.20"
+            app:srcCompat="@drawable/ic_exit" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

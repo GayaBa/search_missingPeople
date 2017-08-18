@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gaya.searchpeople.UserSearchedPeopleActivity">
+
+    <TextView
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:textSize="16sp"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintLeft_toLeftOf="@+id/etSurname"
+        app:layout_constraintRight_toRightOf="@+id/etSurname"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/etSurname"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/etName"
+        android:layout_alignLeft="@+id/etName"
+        android:layout_alignRight="@+id/etName"
+        android:layout_alignStart="@+id/etName"
+        android:layout_below="@+id/etName"
+        android:layout_marginTop="10dp"
+        android:hint="Surname"
+        android:inputType="textPersonName"
+        android:textSize="16sp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="@+id/etAge"
+        app:layout_constraintRight_toRightOf="@+id/etAge"
+        app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+    <TextView
+        android:id="@+id/etAge"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/etSurname"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:hint="Age"
+        android:inputType="number"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="@+id/etComment"
+        app:layout_constraintRight_toRightOf="@+id/etComment"
+        app:layout_constraintTop_toBottomOf="@+id/etSurname" />
+
+    <TextView
+        android:id="@+id/etComment"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/etAge"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Comment"
+        android:inputType="textMultiLine"
+        android:maxLines="4"
+        android:minLines="2"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/etAge" />
+
+    <ImageView
+        android:id="@+id/ivPhoto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="18dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/user"
+        android:layout_below="@+id/etComment"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/tvSearcherName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bDelete"
+        android:layout_alignEnd="@+id/tvSearcher"
+        android:layout_alignLeft="@+id/tvSearcher"
+        android:layout_alignRight="@+id/tvSearcher"
+        android:layout_alignStart="@+id/tvSearcher"
+        android:layout_below="@+id/tvSearcher"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="12dp"
+        android:clickable="true"
+        android:text="TextView"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/tvSearcher"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignEnd="@+id/etComment"
+        android:layout_alignLeft="@+id/etComment"
+        android:layout_alignRight="@+id/etComment"
+        android:layout_alignStart="@+id/etComment"
+        android:layout_below="@+id/ivPhoto"
+        android:layout_marginTop="13dp"
+        android:text="Who  search"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/bDelete"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/layout_bottom_bar"
+        android:layout_alignEnd="@+id/tvSearcherName"
+        android:layout_alignLeft="@+id/tvSearcherName"
+        android:layout_alignRight="@+id/tvSearcherName"
+        android:layout_alignStart="@+id/tvSearcherName"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorAccent"
+        android:text="Delete" />
+
+    <LinearLayout
+        android:id="@+id/layout_bottom_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#222222"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dip"
+        android:weightSum="1">
+
+        <ImageButton
+            android:id="@+id/bHome"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="0.20"
+            app:srcCompat="@drawable/ic_ic_home" />
+
+        <ImageButton
+            android:id="@+id/bSearch"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="0.20"
+            app:srcCompat="@drawable/ic_ic_search" />
+
+        <ImageButton
+            android:id="@+id/bUsers"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="0.20"
+            app:srcCompat="@drawable/ic_users" />
+
+        <ImageButton
+            android:id="@+id/bSetting"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="0.20"
+            app:srcCompat="@drawable/ic_settings" />
+
+        <ImageButton
+            android:id="@+id/bExit"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="0.20"
+            app:srcCompat="@drawable/ic_exit" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

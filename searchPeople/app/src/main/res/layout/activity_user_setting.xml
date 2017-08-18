@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gaya.searchpeople.UserSettingActivity">
+
+
+    <ImageView
+        android:id="@+id/ivPicture"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        app:srcCompat="@drawable/user" />
+
+    <EditText
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/tvSurname"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:textAlignment="center"
+        android:textSize="16sp" />
+
+
+    <EditText
+        android:id="@+id/tvSurname"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/tvAge"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:layout_alignLeft="@+id/tvName"
+        android:layout_alignStart="@+id/tvName"
+        android:layout_alignRight="@+id/tvName"
+        android:layout_alignEnd="@+id/tvName" />
+
+
+    <EditText
+        android:id="@+id/tvAge"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/tvPhone"
+        android:textSize="16sp"
+        android:layout_alignLeft="@+id/tvSurname"
+        android:layout_alignStart="@+id/tvSurname"
+        android:layout_alignRight="@+id/tvSurname"
+        android:layout_alignEnd="@+id/tvSurname" />
+
+    <EditText
+        android:id="@+id/tvPhone"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/tvEmail"
+        android:maxLength="12"
+        android:textSize="16sp"
+        android:layout_alignLeft="@+id/tvAge"
+        android:layout_alignStart="@+id/tvAge"
+        android:layout_alignRight="@+id/tvAge"
+        android:layout_alignEnd="@+id/tvAge" />
+
+    <EditText
+        android:id="@+id/tvEmail"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/tvComment"
+        android:textSize="16sp"
+        android:layout_alignLeft="@+id/tvPhone"
+        android:layout_alignStart="@+id/tvPhone"
+        android:layout_alignRight="@+id/tvPhone"
+        android:layout_alignEnd="@+id/tvPhone" />
+
+    <EditText
+        android:id="@+id/tvComment"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/bChange"
+        android:layout_alignLeft="@+id/tvEmail"
+        android:layout_alignStart="@+id/tvEmail"
+        android:layout_marginBottom="30dp"
+        android:inputType="textMultiLine"
+        android:textSize="16sp"
+        android:layout_alignRight="@+id/tvEmail"
+        android:layout_alignEnd="@+id/tvEmail" />
+
+    <Button
+        android:id="@+id/bChange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="Save changes"
+        android:layout_above="@+id/layout_bottom_bar"
+        android:layout_marginBottom="11dp"
+        android:layout_alignLeft="@+id/tvComment"
+        android:layout_alignStart="@+id/tvComment"
+        android:layout_alignRight="@+id/tvComment"
+        android:layout_alignEnd="@+id/tvComment" />
+
+
+    <LinearLayout
+        android:id="@+id/layout_bottom_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#222222"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dip"
+        android:weightSum="1">
+
+        <ImageButton
+            android:id="@+id/bHome"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="0.20"
+            app:srcCompat="@drawable/ic_ic_home" />
+
+        <ImageButton
+            android:id="@+id/bSearch"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="0.20"
+            app:srcCompat="@drawable/ic_ic_search" />
+
+        <ImageButton
+            android:id="@+id/bUsers"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="0.20"
+            app:srcCompat="@drawable/ic_users" />
+
+        <ImageButton
+            android:id="@+id/bSetting"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="0.20"
+            app:srcCompat="@drawable/ic_settings" />
+
+        <ImageButton
+            android:id="@+id/bExit"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="0.20"
+            app:srcCompat="@drawable/ic_exit" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bNewPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/ivPicture"
+        android:layout_alignLeft="@+id/ivPicture"
+        android:layout_alignRight="@+id/ivPicture"
+        android:layout_alignStart="@+id/ivPicture"
+        android:layout_below="@+id/ivPicture"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorAccent"
+        android:text="Choose new photo" />
+
+
+</RelativeLayout>
